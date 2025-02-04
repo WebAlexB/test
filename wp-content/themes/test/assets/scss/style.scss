@@ -1,0 +1,10 @@
+@use 'about_page' as *;
+@use 'home_page' as *;
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: blue;
+  margin: 0;
+  padding: 0;
+}

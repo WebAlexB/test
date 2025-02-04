@@ -1,0 +1,57 @@
+# Конфигурационные файлы
+wp-config.php
+
+# Директории для кеша
+wp-content/cache/
+wp-content/backups/
+wp-content/uploads/
+
+node_modules/
+dist/
+build/  
+wp-content/themes/test/assets/css/*
+.idea/
+
+!wp-content/themes/test/assets/css/style.css
+
+# Логи
+*.log
+
+# Личные и временные файлы
+*.swp
+*.swo
+.DS_Store
+
+# Файлы базы данных
+*.sql
+
+# Компрессированные архивы
+*.tar.gz
+*.zip
+
+# Секреты, ключи и другие конфиденциальные данные
+*.env
+
+# Папки и файлы для CI/CD, как например для Docker
+docker-compose.yml
+
+# Зависимости Node.js
+my-next-project8/.next/
+my-next-project8/node_modules/
+
+# Файлы конфигурации окружения
+my-next-project8/.env.local
+
+# Конфигурационные файлы Next.js
+my-next-project8/next.config.ts
+my-next-project8/eslint.config.mjs
+my-next-project8/postcss.config.mjs
+my-next-project8/tailwind.config.ts
+my-next-project8/tsconfig.json
+my-next-project8/next-env.d.ts
+
+# Файлы пакетов
+my-next-project8/package-lock.json
+
+# Публикуемые файлы
+public/

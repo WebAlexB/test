@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass assets/scss:assets/css --style compressed",
+    "sass": "sass --watch assets/scss:assets/css",
+    "watch": "npm run sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebAlexB/test.git"
+  },
+  "author": "WebAlexB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebAlexB/test/issues"
+  },
+  "homepage": "https://github.com/WebAlexB/test#readme",
+  "devDependencies": {
+    "sass": "^1.65.0"
+  }
+}
