@@ -1,0 +1,51 @@
+.section-menu, .header-content {
+	display: flex;
+	width: 100%;
+	background: white;
+	justify-content: center;
+}
+
+#bwp-header .menu-header {
+	order: 0 !important;
+}
+
+.menu-header {
+	align-items: center;
+	justify-content: center;
+}
+
+.section-search {
+	flex: 1 0 30%;
+}
+
+.testimonial-title h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+@media (min-width: 767px) {
+	#bwp-header .menu-header {
+		display: none;
+	}
+
+	.phone {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.work-section p {
+		margin: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	#bwp-header .phone {
+		display: none;
+	}
+	.work-section {
+		display: none;
+	}
+}

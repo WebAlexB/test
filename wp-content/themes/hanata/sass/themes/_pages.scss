@@ -1,0 +1,476 @@
+/* Page default --------------------------------- */
+.default-template .article{
+	background: $white;
+}
+
+/* Elements Boostrap Page ---------------------------------- */
+.bs-component,
+.bs-docs-section{
+	.modal{
+		bottom: auto;
+		display: block;
+		left: auto;
+		position: relative;
+		right: auto;
+		top: auto;
+		z-index: 1;
+	}
+	p:empty{
+		margin: 0;
+		padding: 0;
+		@include hide-text();
+	}
+	br{
+		display: none;
+	}
+	.modal-dialog{
+		width: 90%;
+	}
+}
+
+/* Contact Page ---------------------------------- */
+div.wpcf7-validation-errors{
+	margin: 0;
+	padding: 10px;
+}
+.contact-form-content{
+	padding: $theme-padding;
+	background: $contact-bg;
+	margin-bottom: $theme-margin + 10;
+	min-height: 260px;
+	.rounded{
+		color: $white;
+		@include size(40px,40px);
+		background: darken($body-bg, 20%);
+		.fa,.icon{
+			@include font-size(font-size,16px);
+			margin: 13px;
+		}
+	}
+	small{
+		color: darken($text-color, 20%);
+	}
+}
+
+
+
+##{$app-prefix}-main{
+    .wpb_gmaps_widget .wpb_wrapper {background: none; padding: 0;}
+    
+    
+    #wpcf7-f8-p321-o1 {
+        p {
+            .wpcf7-form-control-wrap {
+                margin-top: 5px; display: block;
+            }
+        }
+    }
+}
+
+.text-block-page{
+	border-bottom: 1px solid $border-color;
+	padding-bottom: 10px;
+	@include rtl-margin(0, 0, 22px, 0);
+}
+h3.text-block-page{
+	font-size: 18px;
+}
+.contact-info{
+	@media (max-width: $screen-sm-max){
+		>div + div{
+			margin-top: 50px;
+	    }
+	}
+	h2.vc_custom_heading{
+		font-size: 25px;
+		margin-top: 0;
+		margin-bottom: 46px;
+	}
+	ul{
+		list-style-type: none;
+		padding: 0;
+		li{
+			margin-bottom: 25px;
+			strong{
+				display: block;
+			    font-weight: 500;
+			    color: $theme-color;
+			    padding-bottom: 3px;
+			    font-size: 17px;
+			}
+		}
+	}	
+}
+.contact{
+	.wpcf7-form div.wpcf7-validation-errors, .wpcf7-form div.wpcf7-acceptance-missing{
+		margin-top: 15px !important;
+	}
+}
+
+.about-us{
+    font-weight: 300;
+    h2{
+   	    font-size: 35px;
+   	    margin-top: 20px;
+    	margin-bottom: 45px;
+    }
+    h4.subtitle{
+   	    font-size: 20px;
+   	    margin-top: 40px;
+   	    @media (max-width: 1550px) and (min-width: $screen-lg){
+   	    	margin-top: 25px;
+   	    }
+    }
+    h3.footer-about{
+		font-family: $font-family-base;
+		font-size: 20px;
+		font-weight: 500;
+		position: relative;
+		padding-top: 20px;
+		margin-top: 53px;
+		&:before{
+			position: absolute;
+			content: "";
+			top: 0;
+			@include rtl-left(calc(50% - 35px));
+			@include size(70px, 2px);
+			background: $theme-color;
+		}
+    }
+    .bwp-widget-banner{
+    	@media (max-width: $screen-md-max){
+   			text-align: center;
+   			margin-bottom: 30px !important;
+   		}
+    }
+    .wpb_text_column{
+   		padding: 0 20px;
+   		blockquote{
+   			border: none;
+   			margin: 0;
+   			color: $text-color;
+		    @include rtl-padding(8px, 0, 0, 20px);
+		    font-size: $font-size-base;
+		    position: relative;
+		    &:before{
+		        content: "\f10d";
+		        font-family: FontAwesome;
+		        position: absolute;
+		        @include rtl-left(0);
+		        top: -5px;
+		        font-style: normal;
+		    }
+   		}
+   		@media (min-width: 1550px){
+   			padding: 0 50px;
+   		}
+    }
+    .row-no-padding{
+    	@media (min-width: 1550px){
+			>.vc_col-lg-6{
+	   			&:first-child{
+	   				width: 52.38%;
+	   			}
+	   			&:last-child{
+	   				width: 47.62%;
+	   			}
+	   		}
+    	}
+    	.wpb_text_column{
+   	   	    padding-left: 35px;
+   	   	    padding-right: 35px;
+   	   	    @media (max-width: 1550px) and (min-width: $screen-lg){
+   	   	    	padding-left: 25px;
+   	   	    }
+   	   	    @media (min-width: 1550px){
+   	   	    	padding-left: 40px;
+	   	   	    padding-right: 65px;
+   	   	    }
+   	    }
+    }
+}
+
+.contact-text{
+	font-size: 12px;
+}
+.contact-us-form{
+	.title-input{
+		display: inline-block;
+		padding-bottom: 14px;
+	}
+	label{
+		font-weight: 400;
+		margin-bottom: 12px;
+	}
+	input[type="text"], input[type="email"]{
+		height: 47px;
+		margin-bottom: 20px;
+		width: 100%;
+		padding: 10px 15px;
+		&:hover, &:focus{
+			border-color: rgba($light-gray, 0.5);
+		}
+	}
+	textarea{
+		width: 100%;
+		max-height: 120px;
+		padding: 10px 15px;
+		&:hover, &:focus{
+			border-color: rgba($light-gray, 0.5);
+		}
+	}
+	input[type="submit"]{
+		height: 47px;
+		line-height: 47px;
+		font-weight: 700;
+		text-align: center;
+		font-size: 15px;
+		padding: 0 75px;
+		color: $white;
+		background: $theme-color;
+		border: none;
+		text-transform: capitalize;
+		@include transition(all 0.3s ease); 
+		&:hover{
+			background: darken($theme-color, 10%);
+		} 
+	}
+	.form-required{
+		label{
+			&:after{
+				content: "*";
+				color: red;
+				@include rtl-margin-left(3px);
+			}
+		}
+	}
+}
+
+/* Page About Us ---------------------------------- */
+.about-info{
+	h2{
+		margin-top: -4px;
+    	margin-bottom: 30px;
+	}
+	h6{
+		font-size: 12px;
+		font-weight: 600;
+		a{
+			@include rtl-margin-right(5px);
+		}
+		img{
+			@include transform(translateY(-8px));
+		}
+	}
+}
+
+/* Page Not Found ---------------------------------- */
+.page_not_found{
+	@include rtl-margin(20px, 0, 80px, 0);
+	.error-title{
+		letter-spacing: $error-title-letter-spacing;
+		margin: $error-title-margin;
+		@include font-size(font-size,$error-title-font-size);
+	}
+	.error-content{
+		line-height: 40px;
+		margin-bottom: 30px;
+		@include font-size(font-size,$error-content-font-size);
+	}
+	.page-footer{
+		p{
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.woocommerce-page .header-title{
+	display: none;
+}
+
+.blog-page-list{
+	.entry-title{
+		font-size: $font-size-base + 3;
+		line-height: 1.2;
+		padding-top: 10px;
+		margin-bottom: 0!important;
+	}
+	.entry-meta{
+		margin-top: 5px!important;
+	}
+}
+
+.error404{
+	.bwp-main{
+		text-align: center;
+	}
+	.img-404{
+		display: inline-block;
+		margin-bottom: 32px;
+	}
+	.content-page-404{
+		margin-bottom: 10px;
+		.title-error{
+			font-size: 25px;
+			text-transform: uppercase;
+			color: $gray-dark;
+			margin-bottom: 75px;
+			font-family: $font-family-monospace;
+			@media (max-width: $screen-xs-max){
+				margin-bottom: 40px;
+			}
+		}
+		.text-error{
+			font-size: 20px;
+			color: $gray-dark;
+			margin-bottom: 5px;
+		}
+		.sub-error{
+			width: 100%;
+			max-width: 550px;
+			margin: 0 auto;
+			font-weight: 300;
+		}
+		a{
+			margin-top: 50px;
+			padding: 0 15px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
+			color: $white;
+			background: $theme-color;
+			&:hover{
+				background: darken($theme-color, 10%);
+			}
+		}
+	}
+}
+
+/* Page My Account ---------------------------------- */
+.woocommerce-MyAccount-navigation{
+	background: $white;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 60px;
+    padding: 20px 30px;
+	width : 30%;
+	@include rtl-float-left();
+	ul{
+		padding: 0;     
+		list-style: none;
+		li{
+			border-bottom: 1px solid #e5e5e5;
+			list-style-type: none;
+			padding: 10px 0;
+			vertical-align: middle;	
+			&:last-child{
+				border-bottom : none;
+			}
+			a, span{
+                @include transition(all .2s ease 0s);                
+                &.active, &:hover{
+                    color: $theme-color;
+                    cursor: pointer;
+                }
+            }
+		}
+	}
+}
+.woocommerce-MyAccount-content{
+	width : 68%;
+	@include rtl-float-right();
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 12px;
+	}
+	input[type="submit"]{
+		background: $theme-color;
+		color: $white;
+		border: none;
+		@include transition(all 0.3s ease); 
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 5px 10px;
+	    &:hover{
+			background: lighten($theme-color, 5%);
+		}   
+	}
+}
+
+.lost_reset_password{
+	.form-row{
+		margin: 0;
+		input[type="submit"]{
+			position: absolute;
+			bottom: 0;
+			height: 35px;
+		}
+	}
+}
+.woocommerce-lost-password .lost_reset_password{
+	.form-row.form-row-first{
+		float: none;
+		@media (max-width: $screen-xs-max){
+			width: 100%;
+		}
+	}
+	button[type="submit"]{
+		margin-top: 10px;
+	}
+}
+
+.woocommerce-cart-form{
+	margin-bottom: 30px;
+}
+
+.cart_totals{
+	table.shop_table{
+		>tbody{
+			>tr{
+				&.shipping{
+					ul li label{
+						font-weight: normal;
+					}
+				}
+				>td{
+					text-align: center;
+					a.shipping-calculator-button{
+						color: $theme-color;
+						text-transform: uppercase;
+						&:before{
+							content: "\f067";
+							font-family: FontAwesome;
+							@include rtl-margin-right(10px);
+						}
+					}
+				}
+			}
+		}
+	}
+	.wc-proceed-to-checkout{
+		>a.wc-forward{
+			background: $gray-dark;
+			color: $white;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 600;
+			&:hover{
+				background: $theme-color;
+			}
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
+
+.wc-proceed-to-checkout{
+	.wc-forward{
+		&:after{
+			content: "\f061";
+		}
+	}
+}

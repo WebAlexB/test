@@ -1,0 +1,12 @@
+/*
+Theme Name: Hanata Child
+Theme URI: http://www.wpbingosite.com/wordpress/hanata
+Author: wpbingo
+Description: This is a child theme for Hanata
+Version: 1.0
+Author URI: http://wpbingosite.com
+Template: hanata
+Text Domain: hanata-child
+*/
+/*************** ADD YOUR CUSTOM CSS HERE  ***************/
+@import "assets/css/sections/header.css";
