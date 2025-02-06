@@ -18,16 +18,20 @@
 	flex: 1 0 30%;
 }
 
-.testimonial-title h2 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
+.bwp-testimonia .testimonial-title h2 {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 20px !important;
 }
 
 @media (min-width: 767px) {
-	#bwp-header .menu-header {
-		display: none;
+	.bwp-header.header-v4 .header-content {
+		padding: 0 40px 40px 40px;
+	}
+
+	.fa-phone {
+		font-size: 20px;
 	}
 
 	.phone {
@@ -39,13 +43,29 @@
 	.work-section p {
 		margin: 0;
 	}
+
+	body .desktop-menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding-top: 24px;
+	}
 }
 
 @media (max-width: 767px) {
 	#bwp-header .phone {
 		display: none;
 	}
+
 	.work-section {
 		display: none;
+	}
+
+	.wpbingoLogo {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
 	}
 }

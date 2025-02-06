@@ -9,11 +9,11 @@ $show_wishlist        = ( isset( $hanata_settings['show-wishlist'] ) && $hanata_
                               rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 <header id='bwp-header' class="bwp-header header-v4">
 	<div class='header-wrapper '>
+		<div class="col-lg-5 col-md-6 col-sm-4 col-xs-2 wpbingo-menu-mobile desktop-menu menu-header">
+			<?php hanata_top_menu(); ?>
+		</div>
 		<div class='header-content' data-sticky_header="<?php echo esc_attr( $enable_sticky_header ); ?>">
 			<div class="row section-menu">
-				<div class="col-lg-5 col-md-6 col-sm-4 col-xs-2 wpbingo-menu-mobile menu-header">
-					<?php hanata_top_menu(); ?>
-				</div>
 				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 header-logo text-center">
 					<?php hanata_header_logo(); ?>
 				</div>
@@ -26,7 +26,7 @@ $show_wishlist        = ( isset( $hanata_settings['show-wishlist'] ) && $hanata_
 					<?php if ( isset( $hanata_settings['phone'] ) && $hanata_settings['phone'] ) : ?>
 						<span class="phone pull-right">
 								<a href="tel:<?php echo esc_attr( $hanata_settings['phone'] ); ?>">
-                                 <i class="fa fa-phone"></i><?php echo esc_html( $hanata_settings['phone'] ); ?>
+                                 <i class="fa fa-phone"></i>
                                 </a>
 						</span>
 					<?php endif; ?>
@@ -61,3 +61,39 @@ $show_wishlist        = ( isset( $hanata_settings['show-wishlist'] ) && $hanata_
 	</div><!-- End header-wrapper -->
 
 </header><!-- End #bwp-header -->
+
+<style>
+	@media (min-width: 767px) {
+		.bwp-header.header-v4 .header-content {
+			padding: 0 40px 40px 40px;
+		}
+		.fa-phone {
+			font-size: 20px;
+		}
+
+		.phone {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.work-section p {
+			margin: 0;
+		}
+		body .desktop-menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			padding-top: 24px;
+		}
+	}
+	@media (max-width: 767px) {
+		#bwp-header .phone {
+			display: none;
+		}
+		.work-section {
+			display: none;
+		}
+	}
+</style>
