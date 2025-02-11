@@ -1,0 +1,28 @@
+.pdf-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	font-family: Arial, sans-serif;
+	max-width: 1200px;
+	margin: auto;
+}
+.pdf-table th, .pdf-table td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+}
+.pdf-table th {
+	background-color: #f4f4f4;
+	font-weight: bold;
+}
+.pdf-table tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+.pdf-table a {
+	text-decoration: none;
+	color: #0073aa;
+	font-weight: bold;
+}
+.pdf-table a:hover {
+	text-decoration: underline;
+}
