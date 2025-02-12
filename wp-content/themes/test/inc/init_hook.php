@@ -16,3 +16,22 @@ remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
 
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+function mime_types( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+
+	return $mimes;
+}
+
+add_filter( 'upload_mimes', 'mime_types' );
+
+function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime ) {
+	if ( str_ends_with( $filename, '.svg' ) ) {
+		$data['ext']  = 'svg';
+		$data['type'] = 'image/svg+xml';
+	}
+
+	return $data;
+}
+
+add_filter( 'wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5 );

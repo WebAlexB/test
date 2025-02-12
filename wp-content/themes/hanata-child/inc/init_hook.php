@@ -21,3 +21,35 @@ function custom_translate_orderby_options( $options ) {
 
 	return $options;
 }
+
+add_action('wp_footer', function() {
+	?>
+	<script>
+		jQuery(document).ready(function($) {
+			$('.filter-orderby li[data-value="date"]').text('Останні товари');
+			$('.filter-orderby li[data-value="rating"]').text('Найвищий рейтинг');
+			$('.filter-orderby li[data-value="popularity"]').text('Найпопулярніші');
+			$('.filter-orderby li[data-value="featured"]').text('Рекомендовані товари');
+		});
+	</script>
+	<?php
+});
+
+function mime_types( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+
+	return $mimes;
+}
+
+add_filter( 'upload_mimes', 'mime_types' );
+
+function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime ) {
+	if ( str_ends_with( $filename, '.svg' ) ) {
+		$data['ext']  = 'svg';
+		$data['type'] = 'image/svg+xml';
+	}
+
+	return $data;
+}
+
+add_filter( 'wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5 );
