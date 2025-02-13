@@ -15,6 +15,13 @@ function hanata_child_css() {
 	wp_deregister_style( 'styles-child-pdf' );
 	wp_register_style( 'styles-child-pdf', get_stylesheet_directory_uri() . '/assets/css/pages/pdf.css' );
 	wp_enqueue_style( 'styles-child-pdf' );
+	wp_deregister_style( 'styles-child-sale_product' );
+	wp_register_style( 'styles-child-sale_product', get_stylesheet_directory_uri() . '/assets/css/pages/sale_product.css' );
+	wp_enqueue_style( 'styles-child-sale_product' );
+
+	wp_deregister_style( 'styles-child-cart' );
+	wp_register_style( 'styles-child-cart', get_stylesheet_directory_uri() . '/assets/css/sections/cart.css' );
+	wp_enqueue_style( 'styles-child-cart' );
 	wp_deregister_style( 'styles-child-category' );
 	wp_register_style( 'styles-child-category', get_stylesheet_directory_uri() . '/assets/css/pages/category.css' );
 	wp_enqueue_style( 'styles-child-category' );

@@ -53,3 +53,12 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime ) {
 }
 
 add_filter( 'wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5 );
+
+function enable_comments_for_blog($open, $post_id) {
+	$post = get_post($post_id);
+	if ('blog' == $post->post_type) {
+		return true;
+	}
+	return $open;
+}
+add_filter('comments_open', 'enable_comments_for_blog', 10, 2);
