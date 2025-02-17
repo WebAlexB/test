@@ -1,0 +1,3 @@
+#payment-method, .woocommerce-order-overview__payment-method .method {
+	display: none;
+}

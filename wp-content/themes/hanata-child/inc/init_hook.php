@@ -62,3 +62,6 @@ function enable_comments_for_blog($open, $post_id) {
 	return $open;
 }
 add_filter('comments_open', 'enable_comments_for_blog', 10, 2);
+
+add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
+
