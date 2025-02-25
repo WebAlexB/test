@@ -1,0 +1,29 @@
+
+@media (max-width: 767px) {
+	.single-product .slick-dots li {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 10px;
+		padding: 10px;
+		height: 10px;
+		top: auto;
+		bottom: -20px;
+		border-radius: 12px;
+		-webkit-transition: transform .2 sease;
+		transition: transform .2 sease;
+	}
+	.single-product .slick-dots li button {
+		font-size: 0;
+		width: 10px;
+		height: 10px;
+		background: hsla(0, 0%, 56%, .5);
+		padding: 0;
+		border-radius: 10px !important;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+		-webkit-transition: transform .2sease;
+		transition: transform .2sease;
+	}
+}
