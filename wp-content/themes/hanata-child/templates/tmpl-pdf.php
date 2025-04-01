@@ -29,9 +29,8 @@ if ( $pdf_files ): ?>
 				<td><?php echo $index + 1; ?></td>
 				<td><?php echo esc_html( $pdf_title ); ?></td>
 				<td>
-					<a href="<?php echo esc_url( $pdf_file ); ?>"
-					   download="<?php echo sanitize_title( $pdf_title ); ?>.pdf">
-						<?php echo esc_html( 'Завантажити PDF' ) ?>
+					<a href="<?php echo esc_url( $pdf_file ); ?>">
+						<?php echo esc_html( 'Онлайн-прайс' ) ?>
 					</a>
 				</td>
 			</tr>
